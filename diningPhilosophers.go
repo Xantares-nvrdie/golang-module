@@ -40,7 +40,7 @@ func main(){
 
 	forks := make([]sync.Mutex, numPhilosophers)
 
-	for i:=1; i < numPhilosophers;i++{
+	for i:=0; i < numPhilosophers;i++{
 		wg.Add(1)
 		go philosophers(i, forks, &wg)
 	}
